@@ -15,7 +15,7 @@
           state: present
           update_cache: yes
           
-    - name: Change the working directory to /opt
+    - name: Change the working directory
       ansible.builtin.shell:
         cmd: mvn compile                   
-        chdir: /home/ubuntu/project         
+        chdir: /home/ubuntu/project/src/main/java/com/vaadin/tutorial/addressbook         
