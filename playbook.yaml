@@ -23,14 +23,17 @@
           apt:
             name: openjdk-8-jdk
             update_cache: yes
-            state: present- name: Deleting content & directory
+            state: present
+        - name: Deleting content & directory
           file:
             state: absent
-            path: /opt/tomcat- name: Creating /opt/tomcat directory
+            path: /opt/tomcat
+            - name: Creating /opt/tomcat directory
           file:
             path: /opt/tomcat
             state: directory
-            mode: 0755- name: Downloading & unarchiving
+            mode: 0755
+        - name: Downloading & unarchiving
           unarchive:
             src: "{{ tomcat_archive_url }}"
             dest: /opt/tomcat
@@ -42,14 +45,16 @@
             name: tomcat
             group: tomcat
             home: /user/share/tomcat
-            createhome: no- name: Changing ownership
+            createhome: no
+        - name: Changing ownership
           file:
             path: /opt/tomcat
             owner: tomcat
             group: tomcat
             mode: "u+rwx,g+rx,o=rx"
             recurse: yes
-            state: directory- name: Copying Tomcat service file from local to remote
+            state: directory
+        - name: Copying Tomcat service file from local to remote
           copy:
              src: files/tomcat.service
              dest: /etc/systemd/system/
