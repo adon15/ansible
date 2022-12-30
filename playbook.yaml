@@ -3,6 +3,6 @@
    - name: Clone a github repository
      git:
        repo: https://github.com/vaadin/addressbook
-       dest: /home/debian/repos/
+       dest: /home/ubuntu/project
        clone: yes
        update: yes
