@@ -16,8 +16,7 @@
           update_cache: yes
           
     - name: Change the working directory
-      ansible.builtin.shell: |
-        mvn compile
-        mvn package                  
-        args: 
-            chdir: /home/ubuntu/finalproject
+      ansible.builtin.shell:
+        cmd: mvn compile
+        cmd: mvn package                  
+        chdir: /home/ubuntu/finalproject
