@@ -1,16 +1,16 @@
  - name: "Deployin Java app on tomcat server"
-  hosts: all
-  become: true
-  tasks:
-   - name: Clone a github repository
-     git:
-       repo: https://github.com/vaadin/addressbook
-       dest: /home/ubuntu/project
-       clone: yes
-       update: yes
+   hosts: all
+   become: true
+   tasks:
+    - name: Clone a github repository
+      git:
+        repo: https://github.com/vaadin/addressbook
+        dest: /home/ubuntu/project
+        clone: yes
+        update: yes
        
-   - name: "Install Maven using Ansible"
-     apt:
-         name: "maven"
-         state: present
-         update_cache: yes
+    - name: "Install Maven using Ansible"
+      apt:
+          name: "maven"
+          state: present
+          update_cache: yes
