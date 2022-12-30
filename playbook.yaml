@@ -7,11 +7,10 @@
        clone: yes
        update: yes
        
-  - name: Install Maven using Ansible
-      become: yes
-      apt:
-        name: "{{ packages }}"
-        state: present
-      vars:
-        packages:
-           - maven
+   - name: "Install Maven using Ansible"
+     tasks:
+              - name: "Install Maven using Ansible"
+                apt:
+                    name: "maven"
+                    state: present
+                    update_cache: yes
