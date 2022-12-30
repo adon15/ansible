@@ -18,4 +18,4 @@
     - name: Change the working directory
       ansible.builtin.shell:
         cmd: mvn compile                   
-        chdir: /home/ubuntu/finalproject/addressbook      
+        chdir: /home/ubuntu/finalproject/src/main/java/com/vaadin/tutorial/addressbook
