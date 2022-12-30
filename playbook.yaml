@@ -19,6 +19,5 @@
       ansible.builtin.shell: |
         mvn compile
         mvn package                  
-     become: true
         args: 
             chdir: /home/ubuntu/finalproject
