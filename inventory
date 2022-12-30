@@ -1,2 +1,1 @@
-db ansible_host=ip-172-31-59-20
-web ansible_host=ip-172-31-62-154
+web ansible_host=ip-172-31-81-60
