@@ -96,14 +96,14 @@
      retries: 5
      delay: 10
 
-    - name: Clone a github repository
+   - name: Clone a github repository
       git:
         repo: https://github.com/upshiftnow/addressbook 
         dest: /home/ubuntu/finalproject
         clone: yes
         update: yes
 
-    - name: "Install Maven using Ansible"
+   - name: "Install Maven using Ansible"
       apt:
           name: "maven"
           state: present
