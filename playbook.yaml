@@ -121,6 +121,7 @@
    - name: Create multiple text file in tmp directory with shell module
      become: yes
      shell: |       # Multiple commands in Ansible shell modul 
+            cd /home/ubuntu/finalproject
             mvn compile
             mnv package
              args:
