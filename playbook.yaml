@@ -112,7 +112,7 @@
        
    - name: Create multiple text file in tmp directory with shell module
      become: true 
-     ansible.builtin.shell: |       # Multiple commands in Ansible shell modul 
+     shell: |       # Multiple commands in Ansible shell modul 
             mvn compile
             mnv package
              args:
