@@ -110,19 +110,31 @@
        state: present
        update_cache: yes
          
-   - name: Download Open JDK
-     become: yes
-     apt:
-       name: openjdk-8-jre-headless
-       update_cache: yes
-       state: present         
+#    - name: Download Open JDK
+#      become: yes
+#      apt:
+#        name: openjdk-8-jre-headless
+#        update_cache: yes
+#        state: present         
          
+       
+#    - name: Create multiple text file in tmp directory with shell module
+#      become: yes
+#      shell: |       # Multiple commands in Ansible shell modul 
+#             cd /home/ubuntu/finalproject
+#             mvn compile
+#             mnv package
+#              args:
+#                  chdir: /home/ubuntu/finalproject
+
        
    - name: Create multiple text file in tmp directory with shell module
      become: yes
      shell: |       # Multiple commands in Ansible shell modul 
-            cd /home/ubuntu/finalproject
-            mvn compile
-            mnv package
+            cd /home/ubuntu/finalproject/target
+            cp *.war /opt/tomcat8/webapps
              args:
-                 chdir: /home/ubuntu/finalproject
+                 chdir: /home/ubuntu/finalproject/target
+
+
+
