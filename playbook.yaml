@@ -45,9 +45,9 @@
        group: tomcat
        owner: tomcat
     
-#    - name: Move files to the /opt/tomcat8 directory
-#      become: yes
-#      shell: "mv /opt/tomcat8/apache*/* /opt/tomcat8"
+   - name: Move files to the /opt/tomcat8 directory
+     become: yes
+     shell: "mv /opt/tomcat8/apache*/* /opt/tomcat8"
 
    - name: Creating a service file
      become: yes
@@ -106,12 +106,20 @@
    - name: "Install Maven using Ansible"
      become: yes
      apt:
-         name: "maven"
-         state: present
-         update_cache: yes
+       name: "maven"
+       state: present
+       update_cache: yes
+         
+   - name: Download Open JDK
+     become: yes
+     apt:
+       name: openjdk-8-jre-headless
+       update_cache: yes
+       state: present         
+         
        
    - name: Create multiple text file in tmp directory with shell module
-     become: true 
+     become: yes
      shell: |       # Multiple commands in Ansible shell modul 
             mvn compile
             mnv package
