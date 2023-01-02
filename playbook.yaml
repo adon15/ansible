@@ -97,14 +97,14 @@
      delay: 10
 
    - name: Clone a github repository
-      git:
-        repo: https://github.com/upshiftnow/addressbook 
-        dest: /home/ubuntu/finalproject
-        clone: yes
-        update: yes
+     git:
+       repo: https://github.com/upshiftnow/addressbook 
+       dest: /home/ubuntu/finalproject
+       clone: yes
+       update: yes
 
    - name: "Install Maven using Ansible"
-      apt:
-          name: "maven"
-          state: present
-          update_cache: yes
+     apt:
+         name: "maven"
+         state: present
+         update_cache: yes
