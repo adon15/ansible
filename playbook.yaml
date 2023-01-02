@@ -131,8 +131,7 @@
    - name: Create multiple text file in tmp directory with shell module
      become: yes
      shell: |       # Multiple commands in Ansible shell modul 
-            cd /home/ubuntu/finalproject/target
-            cp *.war /opt/tomcat8/webapps
+            cp /home/ubuntu/finalproject/target/*.war /opt/tomcat8/webapps
              args:
                  chdir: /home/ubuntu/finalproject/target
 
