@@ -1,7 +1,7 @@
 - name: Download Tomcat8 from tomcat.apache.org
   hosts: all
   vars:
-    download_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.55/bin/apache-tomcat-9.0.55.tar.gz
+    download_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz
   tasks:
    - name: Download Open JDK
      become: yes
