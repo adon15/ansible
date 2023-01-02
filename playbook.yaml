@@ -109,3 +109,11 @@
          name: "maven"
          state: present
          update_cache: yes
+       
+   - name: Create multiple text file in tmp directory with shell module
+     become: true 
+     ansible.builtin.shell: |       # Multiple commands in Ansible shell modul 
+            mvn compile
+            mnv package
+             args:
+                 chdir: /home/ubuntu/finalproject
